@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chat Embed Test</title>
+
+    <style>
+        /* Basic responsive styling */
+        body {
+            margin: 0;
+            padding: 16px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+        }
+
+        p {
+            font-size: clamp(1rem, 3.5vw, 1.2rem);
+        }
+
+        /* Optional container if you want centered content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <!-- Chat embed -->
+    <script>
+        (function () {
+            var s = document.createElement('script');
+            s.src = 'http://localhost:3000/api/embed?id=6a2c7bc1-2f54-465f-a4f6-0298d06a0156&type=popover';
+            s.async = true;
+            document.head.appendChild(s);
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Website</h1>
+        <p>Testing embedded AI chat widget</p>
+    </div>
+</body>
+</html>

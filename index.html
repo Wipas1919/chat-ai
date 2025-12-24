@@ -2,42 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Makes the page responsive on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Chat Embed Test</title>
-
+    <title>Chat Widget Embed</title>
     <style>
-        /* Basic responsive styling */
         body {
-            margin: 0;
-            padding: 16px;
             font-family: Arial, sans-serif;
-            line-height: 1.5;
-        }
-
-        h1 {
-            font-size: clamp(1.5rem, 5vw, 2.5rem);
-        }
-
-        p {
-            font-size: clamp(1rem, 3.5vw, 1.2rem);
-        }
-
-        /* Optional container if you want centered content */
-        .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
         }
     </style>
-
-    <!-- Chat embed -->
-    <script>(function(){var s=document.createElement('script');s.src='https://dev-chat.qsncc.com /api/embed?id=1e1d6259-913c-40ed-addc-43a13c96f659&type=popover';s.async=true;document.head.appendChild(s);})();</script>
+</head>
 <body>
     <div class="container">
-        <h1>My Website</h1>
-        <p>Testing embedded AI chat widget</p>
+        <h1>Welcome to the Chat Widget Demo</h1>
+        <p>This page demonstrates the embedded chat widget. The chat widget should appear as a popover on this page.</p>
+        <p>Look for the chat icon or popover in the corner of the page to interact with the chat widget.</p>
     </div>
+
+    <!-- Chat Widget Embed Script -->
+    <script>
+        (function(){
+            var s=document.createElement('script');
+            s.src='https://dev-chat.qsncc.com/api/embed?id=1e1d6259-913c-40ed-addc-43a13c96f659&type=popover';
+            s.async=true;
+            document.head.appendChild(s);
+        })();
+    </script>
 </body>
 </html>
+
